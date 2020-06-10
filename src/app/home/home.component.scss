@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+$primary_color: #16a085;
+$secondary_color: #ffffff;
+.main_container {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: $secondary_color;
+  font-family: "Montserrat";
+  .signin {
+    min-width: 300px;
+    max-width: 400px;
+    height: 300px;
+    background-color: $primary_color;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .header {
+      color: $secondary_color;
+    }
+    mat-form-field {
+      max-width: 300px;
+      padding: 10px;
+
+      color: $secondary_color;
+      mat-label {
+        color: $secondary_color;
+      }
+    }
+    .button {
+      outline: none;
+      border: none;
+      background-color: $secondary_color;
+      border-color: $primary_color;
+      border-radius: 10px;
+      color: $primary_color;
+      width: 200px;
+      height: 45px;
+      box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+      font-size: 1.2rem;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}
+::ng-deep {
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: $secondary_color;
+  }
+  .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: $secondary_color;
+  }
+}

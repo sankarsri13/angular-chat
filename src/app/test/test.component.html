@@ -1,0 +1,35 @@
+<div class="main_cont">
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side" hidden="false">
+      <h2>Available Users</h2>
+      <div *ngIf="users_detail">
+        <h3 *ngFor="let item of users_detail.ids">{{ item.name }}</h3>
+      </div>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        <img src="../../assets/group.svg" alt="" />
+      </button>
+
+      <div *ngIf="messages">
+        <div *ngFor="let m of messages">
+          <div class="mess_card">{{ m.message }}</div>
+          <h5>{{ m.username }}</h5>
+        </div>
+      </div>
+      <div *ngIf="intros">
+        <div *ngFor="let i of intros">
+          <div class="join_card">{{ i }} has left the chat</div>
+        </div>
+      </div>
+      <input type="text" name="" id="" class="message" [(ngModel)]="value" />
+      <img
+        src="../../assets/send.svg"
+        alt=""
+        class="send_ico"
+        (click)="sendMessage()"
+      />
+    </div>
+  </mat-drawer-container>
+</div>

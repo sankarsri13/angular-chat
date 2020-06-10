@@ -1,0 +1,10 @@
+<div class="main_container">
+  <div class="signin">
+    <h1 class="header">Angular Chat</h1>
+    <mat-form-field appearance="outline">
+      <mat-label>Username</mat-label>
+      <input matInput placeholder="Enter your username" #user />
+    </mat-form-field>
+    <button class="button" routerLink="/{{ user.value }}">Submit</button>
+  </div>
+</div>
